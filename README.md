@@ -20,7 +20,7 @@ At the moment  this exclusion is necessary because otherwise  necessary JNA nati
 2. Add the following permissions to your `AndroidManifest.xml`:
 
 ```xml
-
+<uses-permission android:name="android.permission.INTERNET" />
 ```
 
 3. Delete Samba database files if they exist in your app's data directory. This is necessary to avoid issues with the Samba database when initializing the wrapper.
@@ -62,3 +62,4 @@ result?.let { header ->
 }
 ```
 
+You can find an example app using this wrapper here: https://github.com/biafra23/AndroidPortal
