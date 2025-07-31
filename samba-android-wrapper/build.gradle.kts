@@ -164,8 +164,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    api("net.java.dev.jna:jna:4.4.0@aar")
-//    implementation("net.java.dev.jna:jna:4.4.0")
+//    implementation("net.java.dev.jna:jna:5.13.0@aar")
+    implementation("net.java.dev.jna:jna:5.13.0")
 
     implementation("io.projectreactor:reactor-core:3.5.0")
 //    implementation("org.rocksdb:rocksdbjni:9.10.0")
