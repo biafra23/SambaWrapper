@@ -8,14 +8,14 @@ This Android library (aar) provides a simple wrapper around the Portal Network c
 
 ```kotlin   
 dependencies {
-    implementation("com.github.biafra23:SambaWrapper:e2e14bba9a")   {    // aar 5.17.0
+    implementation("com.github.biafra23:SambaWrapper:e2e14bba9a")   { 
         exclude(group = "net.java.dev.jna", module = "jna")
     }
-    implementation("net.java.dev.jna:jna:5.17.0@aar") // missing at runtime when using jitpack build version of SambaWrapper
+    implementation("net.java.dev.jna:jna:5.17.0@aar")
 }
 ```
 
-At the moment  this inclusion is necessary because otherwiese  necessary JNA native libs are missing at runtime when using the jitpack build version of SambaWrapper. When you build the library yourself, you can remove this dependency and the exclusion.
+At the moment  this exclusion is necessary because otherwise  necessary JNA native libs are missing at runtime when using the jitpack build version of SambaWrapper. When you build the library yourself, you can remove this dependency and the exclusion.
 
 2. Add the following permissions to your `AndroidManifest.xml`:
 
@@ -28,7 +28,6 @@ At the moment  this inclusion is necessary because otherwiese  necessary JNA nat
 ```kotlin
  val sambaDir = filesDir.absolutePath + "/samba"
         if (File(sambaDir).exists()) {
-            logger.error("Deleting samba directory")
             File(sambaDir).deleteRecursively()
         }
 
