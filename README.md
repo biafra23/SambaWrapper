@@ -4,7 +4,7 @@ This Android library (aar) provides a simple wrapper around the Portal Network c
 
 ## Usage
 
-1. Add the dependency to your `build.gradle` file:
+1. Add the dependency to your `build.gradle.kts` file:
 
 ```kotlin   
 dependencies {
